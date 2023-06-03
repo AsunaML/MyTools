@@ -387,6 +387,12 @@
             return node
         }
 
+        function createSplitLine(){
+            let node = document.createElement('hr');
+            node.style.width = '100%';
+            return node
+        }
+
         function createBtnGroup(btnList){
             let node = document.createElement('div');
             node.classList.add('oneLine');
@@ -397,8 +403,6 @@
         }
 
         // add contrl pannel
-        // let controlPannel = document.createElement('div');
-        // controlPannel.id = 'myControlPannel';
         let controlPannel = createContrlPannelNode();
 
         controlPannel.appendChild(createBtnGroup([
@@ -409,6 +413,10 @@
         controlPannel.appendChild(createBtnGroup([
             createRefreshDataBtn(),
             createHideDataBtn()
+        ]));
+
+        controlPannel.appendChild(createBtnGroup([
+            createSplitLine()
         ]));
 
         controlPannel.appendChild(createBtnGroup([
